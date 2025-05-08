@@ -1,54 +1,52 @@
-# React + TypeScript + Vite
+# 🧑‍💻 Aadhaar OCR System – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for the **Aadhaar OCR System**, built with **React.js**. The goal? Let users upload both sides of their Aadhaar card, send them to the backend for OCR, and neatly display the extracted data like name, DOB, and Aadhaar number.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔥 Features
 
-## Expanding the ESLint configuration
+✅ Upload front and back images of an Aadhaar card  
+✅ Preview uploaded images instantly  
+✅ Trigger OCR extraction via backend API  
+✅ Display Aadhaar details in a clean layout  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Tech Stack
+
+- ⚛️ React (with Hooks)
+- 📡 Axios – for handling API requests
+- 🎨 Tailwind CSS *(or any CSS framework you prefer)*
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/DilfaThayyil/aadharXtract-Client.git
+cd aadharXtract-Client
+
+2. Install Dependencies
+npm install
+
+3. Setup Environment Variables
+
+4. Start the Development Server
+npm start
 ```
+🧪 How to Use
+Upload clear images of the front and back of an Aadhaar card
+Click the "Extract Info" button
+View the extracted data rendered below the upload section
+If it doesn’t work — check the backend or file types 😉
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🧼 Notes
+The backend must be running for this to work (make sure the OCR server is live).
+Only supports JPG or PNG images — under 5MB.
+A good image = better OCR accuracy.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+📬 Feedback / Contributions
+Found a bug? Want to suggest a new feature? Feel free to open an issue or PR — contributions are always welcome! 💬

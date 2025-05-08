@@ -38,15 +38,18 @@ npm install
 npm start
 ```
 🧪 How to Use
+
 Upload clear images of the front and back of an Aadhaar card
 Click the "Extract Info" button
 View the extracted data rendered below the upload section
 If it doesn’t work — check the backend or file types 😉
 
 🧼 Notes
+
 The backend must be running for this to work (make sure the OCR server is live).
 Only supports JPG or PNG images — under 5MB.
 A good image = better OCR accuracy.
 
 📬 Feedback / Contributions
+
 Found a bug? Want to suggest a new feature? Feel free to open an issue or PR — contributions are always welcome! 💬

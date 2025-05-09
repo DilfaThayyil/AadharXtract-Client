@@ -12,7 +12,7 @@ const AadhaarDetails: React.FC<AadhaarDetailsProps> = ({ data, onReset }) => {
       <h2 className="text-2xl font-bold text-center mb-6">Extracted Aadhaar Information</h2>
       
       <div className="grid md:grid-cols-2 gap-4 mb-6">
-        {/* Images */}
+        {/* Images
         <div>
           <h3 className="font-semibold mb-2">Front Side</h3>
           {data.data.frontImage && (
@@ -32,7 +32,7 @@ const AadhaarDetails: React.FC<AadhaarDetailsProps> = ({ data, onReset }) => {
               className="w-full h-48 object-contain border rounded"
             />
           )}
-        </div>
+        </div> */}
       </div>
       
       {/* Details */}

@@ -8,10 +8,8 @@ import { toast } from 'react-toastify';
 const Home: React.FC = () => {
   const [showResults, setShowResults] = useState(false);
   const { loading, error, data, processAadhaarCard } = useOcrService();
-  console.log("data----Home------",data)
   const handleImagesSelected = async (frontImage: File, backImage: File) => {
     const success = await processAadhaarCard(frontImage, backImage);
-    console.log("handleImage----Home-------",success)
     if (success) {
       setShowResults(true);
       toast.success('Successfully extracted Aadhaar information!');

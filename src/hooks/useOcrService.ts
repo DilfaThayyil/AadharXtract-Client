@@ -20,7 +20,6 @@ export const useOcrService = () => {
     
     try {
       const response = await uploadAadhaarImages(frontImage, backImage);
-      console.log("response-hook-useOcrService-----------",response)
       if (response.success && response) {
         setState({
           loading: false,

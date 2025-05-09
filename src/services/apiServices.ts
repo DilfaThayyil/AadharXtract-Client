@@ -19,9 +19,7 @@ export const uploadAadhaarImages = async (
     const formData = new FormData();
     formData.append('front', frontImage);
     formData.append('back', backImage);
-    console.log("formData-----apiService--------",formData)
     const response = await axiosInstance.post<ApiResponse>('/ocr/process-aadhaar', formData);
-    console.log("response---apiService----- : ",response)
     return response.data;
   } catch (error) {
     if (axios.isAxiosError(error) && error.response) {

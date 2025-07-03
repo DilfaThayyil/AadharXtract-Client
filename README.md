@@ -1,6 +1,6 @@
 # 🧑‍💻 Aadhaar OCR System – Frontend
 
-This is the frontend for the **Aadhaar OCR System**, built with **React.js**. The goal? Let users upload both sides of their Aadhaar card, send them to the backend for OCR, and neatly display the extracted data like name, DOB, and Aadhaar number.
+This is the frontend for the **Aadhaar OCR System**, built with **React.js**. It allows users to upload both sides of their Aadhaar card, sends them to the backend for OCR processing, and neatly displays the extracted information like name, date of birth, and Aadhaar number.
 
 ---
 
@@ -9,7 +9,7 @@ This is the frontend for the **Aadhaar OCR System**, built with **React.js**. Th
 ✅ Upload front and back images of an Aadhaar card  
 ✅ Preview uploaded images instantly  
 ✅ Trigger OCR extraction via backend API  
-✅ Display Aadhaar details in a clean layout  
+✅ Display Aadhaar details in a clean and responsive layout  
 
 ---
 
@@ -28,28 +28,62 @@ This is the frontend for the **Aadhaar OCR System**, built with **React.js**. Th
 ```bash
 git clone https://github.com/DilfaThayyil/aadharXtract-Client.git
 cd aadharXtract-Client
+```
 
-2. Install Dependencies
+### 2. Install Dependencies
+
+```bash
 npm install
+```
 
-3. Setup Environment Variables
+### 3. Set Up Environment Variables
 
-4. Start the Development Server
+Create a `.env` file in the root directory and add the backend URL:
+
+```env
+REACT_APP_BACKEND_URL=http://localhost:5000
+```
+
+### 4. Start the Development Server
+
+```bash
 npm start
 ```
-🧪 How to Use
 
-Upload clear images of the front and back of an Aadhaar card
-Click the "Extract Info" button
-View the extracted data rendered below the upload section
-If it doesn’t work — check the backend or file types 😉
+---
 
-🧼 Notes
+## 📄 .env Example
 
-The backend must be running for this to work (make sure the OCR server is live).
-Only supports JPG or PNG images — under 5MB.
-A good image = better OCR accuracy.
+```env
+REACT_APP_BACKEND_URL=http://localhost:5000
+```
 
-📬 Feedback / Contributions
+---
 
-Found a bug? Want to suggest a new feature? Feel free to open an issue or PR — contributions are always welcome! 💬
+## 🧪 How to Use
+
+1. Upload clear images of the **front and back** of the Aadhaar card
+2. Click the **"Extract Info"** button
+3. View the extracted Aadhaar details rendered below the upload section
+
+---
+
+## ⚠️ Requirements & Notes
+
+* Ensure the backend server is running and accessible
+* Only supports `.jpg`, `.jpeg`, or `.png` images
+* Recommended file size: **under 5MB**
+* 💡 Tip: Use **clear, high-resolution images** for better OCR accuracy
+
+---
+
+## 📬 Feedback & Contributions
+
+Found a bug? Want to suggest a new feature?
+Feel free to open an issue or submit a PR. contributions are always welcome! 💬
+
+---
+
+## 📄 License
+
+MIT License © 2025 [Dilfa Thayyil](https://github.com/DilfaThayyil)

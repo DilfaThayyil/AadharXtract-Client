@@ -77,7 +77,6 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onImagesSelected, loading }) 
       
       <form onSubmit={handleSubmit}>
         <div className="grid md:grid-cols-2 gap-4 mb-6">
-          {/* Front Image Upload */}
           <div className="border-2 border-dashed border-gray-300 rounded-lg p-4">
             <div className="text-center mb-2">Front Side</div>
             {frontPreview ? (
@@ -121,7 +120,6 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onImagesSelected, loading }) 
             />
           </div>
           
-          {/* Back Image Upload */}
           <div className="border-2 border-dashed border-gray-300 rounded-lg p-4">
             <div className="text-center mb-2">Back Side</div>
             {backPreview ? (

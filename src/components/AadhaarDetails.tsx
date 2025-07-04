@@ -35,7 +35,6 @@ const AadhaarDetails: React.FC<AadhaarDetailsProps> = ({ data, onReset }) => {
         </div> */}
       </div>
       
-      {/* Details */}
       <div className="bg-gray-50 p-4 rounded-lg mb-6">
         <h3 className="font-semibold mb-4 text-lg">Personal Information</h3>
         <div className="grid md:grid-cols-2 gap-4">
@@ -58,13 +57,11 @@ const AadhaarDetails: React.FC<AadhaarDetailsProps> = ({ data, onReset }) => {
         </div>
       </div>
       
-      {/* Address */}
       <div className="bg-gray-50 p-4 rounded-lg mb-6">
         <h3 className="font-semibold mb-2 text-lg">Address</h3>
         <p>{data.data.address || 'Address not detected'}</p>
       </div>
       
-      {/* Raw Text (Collapsible) */}
       <details className="mb-6">
         <summary className="cursor-pointer font-semibold text-blue-600 mb-2">
           Show Raw Extracted Text

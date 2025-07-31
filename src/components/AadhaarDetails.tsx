@@ -1,5 +1,8 @@
 import React from 'react';
 import { AadhaarData } from '../types/index';
+import { copyToClipboard, downloadAsFile, getFormattedText } from '../utility/saveDetails';
+import { FiCopy } from 'react-icons/fi';
+
 
 interface AadhaarDetailsProps {
   data: AadhaarData;
@@ -8,7 +11,14 @@ interface AadhaarDetailsProps {
 
 const AadhaarDetails: React.FC<AadhaarDetailsProps> = ({ data, onReset }) => {
   return (
-    <div className="w-full max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6">
+    <div className="w-full max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6 relative">
+      <button
+        onClick={() => copyToClipboard(getFormattedText(data.data))}
+        className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+        title="Copy All Details"
+      >
+        <FiCopy size={20} />
+      </button>
       <h2 className="text-2xl font-bold text-center mb-6">Extracted Aadhaar Information</h2>
       
       <div className="grid md:grid-cols-2 gap-4 mb-6">
@@ -78,7 +88,21 @@ const AadhaarDetails: React.FC<AadhaarDetailsProps> = ({ data, onReset }) => {
           </pre>
         </div>
       </details>
-      
+      <div className="flex flex-col md:flex-row justify-center gap-4 mb-6">
+        <button
+          onClick={() => downloadAsFile(getFormattedText(data.data), 'aadhaar-details.txt')}
+          className="px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-600 transition"
+        >
+          Save as TXT
+        </button>
+        <button
+          onClick={() => downloadAsFile(JSON.stringify(data.data, null, 2), 'aadhaar-details.json', 'application/json')}
+          className="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition"
+        >
+          Save as JSON
+        </button>
+      </div>
+
       <div className="flex justify-center">
         <button
           onClick={onReset}

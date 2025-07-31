@@ -38,7 +38,7 @@ export const useOcrService = () => {
     } catch (error) {
       setState({
         loading: false,
-        error: (error as Error).message || 'An unexpected error occurred',
+        error: error instanceof Error ? error.message : 'An unexpected error occurred',
         data: null,
       });
       return false;

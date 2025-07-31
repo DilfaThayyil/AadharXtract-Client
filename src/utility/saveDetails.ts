@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { AadhaarData } from "../types";
 
 export const getFormattedText = (data: AadhaarData['data']) => {
@@ -20,9 +21,9 @@ export const getFormattedText = (data: AadhaarData['data']) => {
 export const copyToClipboard = async (text: string) => {
     try {
         await navigator.clipboard.writeText(text);
-        alert('Copied to clipboard!');
+        toast.success('Copied to clipboard!');
     } catch (err) {
-        alert('Failed to copy text.');
+        toast.error('Failed to copy text.');
     }
 };
 
